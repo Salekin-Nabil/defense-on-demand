@@ -1,0 +1,23 @@
+import React from 'react';
+import { faStar } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import './Service.css';
+
+const Service = ({review}) => {
+    const {name, image, rating, comment} = review;
+    return (
+        <div className=''>
+            <div className="flex justify-center my-[5vw]">
+                <div className="rounded-lg shadow-lg bg-indigo-50 max-w-sm p-5 h-[450px] hover:bg-orange-50 mx-2">
+                    <a className='flex justify-center' href="#!">
+                    <img className="rounded-full border-[10px] border-white" src={image} alt=""/>
+                    </a>
+                    <h4 className='text-[20px] font-bold mt-[40px]'>{name}</h4>
+                    <p className='text-[14px] mt-[40px] font-medium'>{comment}</p>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default Service;

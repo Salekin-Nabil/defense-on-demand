@@ -1,0 +1,56 @@
+[
+    {
+      "id": "624a4a770483b304fedeccb0",
+      "index": 0,
+      "image": "https://randomuser.me/api/portraits/men/3.jpg",
+      "rating": 4.5,
+      "name": "Clarke Beasley",
+      "gender": "male",
+      "comment": "With twice the resolution of earlier GFX models, the Fujifilm GFX 100, unsurprisingly, offers outstanding image quality."
+    },
+    {
+      "id": "624a4a77030d43ac8c1372f9",
+      "index": 1,
+      "image": "https://randomuser.me/api/portraits/women/66.jpg",
+      "rating": 4,
+      "name": "Elizabeth Coleman",
+      "gender": "female",
+      "comment": "The 102MP sensor, the GFX 100 provides a shockingly impressive set of features, performance, video specs and build quality to make it unlike any other medium-format camera on the market."
+    },
+    {
+      "id": "624a4a77301c3af01a299aaf",
+      "index": 2,
+      "image": "https://randomuser.me/api/portraits/men/86.jpg",
+      "rating": 4.5,
+      "name": "Bass Leblanc",
+      "gender": "male",
+      "comment": "With features like in-body image stabilization, phase-detect AF, Cinema 4K video up to 30p, and weather-sealed construction, the Fuji GFX 100 is arguably the most versatile medium-format camera on the market."
+    },
+    {
+      "id": "624a4a77ea08d037a8f67c2b",
+      "index": 3,
+      "image": "https://randomuser.me/api/portraits/women/34.jpg",
+      "rating": 3,
+      "name": "Crystal Perez",
+      "gender": "female",
+      "comment": "Its usability is hampered somewhat by performance limitations and a still-limited native GF lens lineup."
+    },
+    {
+      "id": "624a4a7720dbaf98a17c4988",
+      "index": 4,
+      "image": "https://randomuser.me/api/portraits/men/32.jpg",
+      "rating": 4.5,
+      "name": "Nielsen Edwards",
+      "gender": "male",
+      "comment": "The Fuji GFX 100 is a very unique camera, offering an enticing combination of resolution and performance that simply isn't found elsewhere on the market."
+    },
+    {
+      "id": "624a4a772884827483a6aa8b",
+      "index": 5,
+      "image": "https://randomuser.me/api/portraits/women/50.jpg",
+      "rating": 5,
+      "name": "Carla Gregory",
+      "gender": "female",
+      "comment": "Loved it's high resolution. It's best for capturing small thing in details. I highly recommend it for wild photography."
+    }
+  ]
