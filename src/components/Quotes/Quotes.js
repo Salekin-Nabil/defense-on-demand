@@ -6,7 +6,7 @@ import saulGoodman8 from '../../images/saulGoodman-8.jpg';
 const Quotes = () => {
     return (
         <div>
-            <h1 className='text-[4vw] font-bold mt-[5vw] text-white  shadow-2xl shadow-white mb-28 md:mx-36'>Fun <span className='text-[#beafa7]'>Facts</span></h1>
+            <h1 className='text-[4vw] font-bold mt-[5vw] text-white  shadow-2xl shadow-white mb-28 md:mx-28'>Inspiring <span className='text-[#beafa7]'>Facts</span></h1>
             <div className='md:flex justify-between items-center md:mx-16 mb-52'>
                 <div className='md:order-2 my-20 md:my-0 mx-4 md:mx-0'>
                     <img className='rounded-full border-8 border-white shadow-2xl shadow-white md:w-1/2' src={saulGoodman7} alt=''/>
@@ -34,7 +34,7 @@ const Quotes = () => {
                 <div className='md:w-1/3 mx-4 md:mr-0 my-20 md:my-0 md:ml-36 md:order-1 shadow-2xl shadow-white md:p-8 p-4 bg-[#463c37]'>
                     <h2 className='text-xl font-semibold text-white text-justify'>If you're committed enough, you can make any story work. I once convinced a woman I was Kevin Costner, and it worked, because I believed it!</h2>
                     <h2 className='text-xl font-semibold text-white text-justify'>I can solve any situation. I know a guy.</h2>
-                    <h2 className='text-xl font-semibold text-white text-justify'>Let’s just say I know a guy… who knows a guy… who knows another guy who.</h2>
+                    <h2 className='text-xl font-semibold text-white text-justify'>Let's just say I know a guy… who knows a guy… who knows another guy who.</h2>
                 </div>
             </div>
         </div>

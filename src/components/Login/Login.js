@@ -6,8 +6,6 @@ import auth from '../../firebase.init';
 import Loading from '../Loading/Loading';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import google from '../../images/social icons/google.png';
-import github from '../../images/social icons/github.png';
 import SocialLogin from '../SocialLogin/SocialLogin';
 
 const Login = () => {
@@ -101,7 +99,7 @@ const Login = () => {
                             </div>
                             <p
                             onClick={resetPassword}
-                            className="text-white hover:text-yellow-400 focus:text-yellow-500 active:text-yellow-600 duration-200 transition ease-in-out cursor-pointer"
+                            className="text-yellow-300 hover:text-yellow-400 focus:text-yellow-500 active:text-yellow-600 duration-200 transition ease-in-out cursor-pointer"
                             >Forgot password?</p
                             >
                         </div>

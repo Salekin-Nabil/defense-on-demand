@@ -93,7 +93,7 @@ const Register = () => {
                             <label className="form-check-label inline-block text-white" for="exampleCheck2">Accept Terms and Conditions</label>
                             </div>
                             <p
-                            className="text-white hover:text-yellow-400 focus:text-yellow-500 active:text-yellow-600 duration-200 transition ease-in-out cursor-pointer"
+                            className="text-yellow-300 hover:text-yellow-400 focus:text-yellow-500 active:text-yellow-600 duration-200 transition ease-in-out cursor-pointer"
                             >Update profile?</p
                             >
                         </div>

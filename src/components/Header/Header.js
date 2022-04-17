@@ -37,7 +37,7 @@ const Header = () => {
                         user ?
                             <CustomLink onClick={handleSignOut} className='mr-[6vw] md:py-[5px] px-[20px] text-white hover:text-black md:font-bold border-b-2 border-white' to='/Login'>LOG OUT</CustomLink>
                         :
-                        <div className='flex justify-center'>
+                        <div className='md:flex justify-center'>
                             <CustomLink className='mr-[6vw] md:py-[5px] px-[20px] text-white hover:text-black md:font-bold border-b-2 border-white' to="/Login">LOG IN</CustomLink>
                             <CustomLink className='mr-[6vw] md:mr-0 md:py-[5px] px-[20px] text-white hover:text-black md:font-bold border-b-2 border-white' to="/Register">REGISTER</CustomLink>    
                         </div>
