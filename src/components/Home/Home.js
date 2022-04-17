@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import useReview from '../../hooks/useReview';
 import Banner from '../Banner/Banner';
+import Reviews from '../Reviews/Reviews';
 import Services from '../Services/Services';
 import './Home.css';
 
@@ -12,6 +13,9 @@ const Home = () => {
           <Banner></Banner>
           <div className='md:flex justify-around'>
             <Services></Services>
+          </div>
+          <div className='md:flex justify-around'>
+            <Reviews></Reviews>
           </div>
         </div>
     );

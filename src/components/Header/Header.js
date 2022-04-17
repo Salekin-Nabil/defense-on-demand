@@ -18,10 +18,10 @@ const Header = () => {
                     <FontAwesomeIcon className='text-yellow-600 text-[20px] ml-[10px]' icon={faScaleUnbalancedFlip}></FontAwesomeIcon>
                 </div>
                 <div className={`md:flex bg-[#20242c] justify-center md:static w-full absolute duration-500 ease-in ${open ? 'top-14' : 'top-[-120px]'}`}>
-                    <CustomLink className='mr-[2vw] md:py-[5px] px-[20px] rounded-lg text-white hover:text-black md:font-bold' to="/">HOME</CustomLink>
-                    {/* <CustomLink className='mr-[2vw] md:py-[5px] px-[20px] rounded-lg text-white hover:text-black md:font-bold' to="Home#services">SERVICES</CustomLink> */}
-                    <CustomLink className='mr-[2vw] md:py-[5px] px-[20px] rounded-lg text-white hover:text-black md:font-bold' to="/Blogs">BLOGS</CustomLink>
-                    <CustomLink className='md:py-[5px] px-[20px] rounded-lg text-white hover:text-black md:font-bold' to="/About">ABOUT</CustomLink>
+                    <CustomLink className='mr-[6vw] md:py-[5px] px-[20px] text-white hover:text-black md:font-bold border-b-2 border-white' to="/">HOME</CustomLink>
+                    {/* <CustomLink className='mr-[2vw] md:py-[5px] px-[20px] text-white hover:text-black md:font-bold' to="Home#services">SERVICES</CustomLink> */}
+                    <CustomLink className='mr-[6vw] md:py-[5px] px-[20px] text-white hover:text-black md:font-bold border-b-2 border-white' to="/Blogs">BLOGS</CustomLink>
+                    <CustomLink className='md:py-[5px] px-[20px] text-white hover:text-black md:font-bold border-b-2 border-white' to="/About">ABOUT</CustomLink>
                 </div>
             </div>
         </nav>

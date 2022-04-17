@@ -10,7 +10,7 @@ import Services from './components/Services/Services';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App bg-[#413433]">
       <Header></Header>
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>

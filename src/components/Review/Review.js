@@ -9,7 +9,7 @@ const Review = ({review}) => {
     return (
         <div className=''>
             <div className="flex justify-center my-[5vw]">
-                <div className="rounded-lg shadow-lg bg-indigo-50 max-w-sm p-5 h-[450px] hover:bg-orange-50 mx-2">
+                <div className="rounded-lg shadow-lg bg-[#beafa7] max-w-sm p-5 h-[450px] hover:bg-indigo-50 mx-2">
                     <a className='flex justify-center' href="#!">
                     <img className="rounded-full border-[10px] border-white" src={image} alt=""/>
                     </a>
