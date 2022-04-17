@@ -8,7 +8,7 @@ import { faScaleUnbalancedFlip } from '@fortawesome/free-solid-svg-icons';
 const Header = () => {
     const [open, setOpen] = useState(false);
     return (
-        <nav className='bg-[#20242c] py-4'>
+        <nav className='bg-[#20242c] py-4  shadow-2xl shadow-white'>
             <div className='flex items-center'>
                 <div onClick={()=>setOpen(!open)} className='w-6 h-6 md:hidden'>
                     {open ? <XIcon></XIcon> : <MenuIcon></MenuIcon>}
