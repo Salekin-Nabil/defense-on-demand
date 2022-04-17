@@ -5,7 +5,7 @@ import './Footer.css';
 
 const Footer = () => {
     return (
-        <footer className='bg-[#20242c] h-[200px] w-full flex justify-center py-[60px] mt-[50px]'>
+        <footer className='bg-black h-[200px] w-full flex justify-center py-[60px] mt-[50px]'>
             <div>
                 <div className='flex items-center'>
                     <h4 className='text-[30px] font-semibold text-white'>Defense On Demand</h4>

@@ -9,7 +9,7 @@ import saulGoodman_6 from '../../images/saulGoodman-6.jpg';
 
 const Banner = () => {
     return (
-        <div>
+        <div className='mb-[3vw]'>
             <div>
             <img
                         src={saulGoodman_4}
