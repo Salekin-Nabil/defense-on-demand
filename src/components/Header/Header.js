@@ -11,7 +11,7 @@ const Header = () => {
         <nav className='bg-[#20242c] py-4  shadow-2xl shadow-white'>
             <div className='flex items-center'>
                 <div onClick={()=>setOpen(!open)} className='w-6 h-6 md:hidden'>
-                    {open ? <XIcon></XIcon> : <MenuIcon></MenuIcon>}
+                    {open ? <XIcon className='text-white'></XIcon> : <MenuIcon className='text-white'></MenuIcon>}
                 </div>
                 <div className='flex items-center md:justify-start justify-center md:pl-8'>
                     <h4 className='text-[20px] font-semibold text-white'>DefenseOnDemand</h4>

@@ -9,7 +9,7 @@ const Home = () => {
     const [reviews, setReviews] = useReview();
     const navigate = useNavigate();
     return (
-        <div className='mt-[1vw]'>
+        <div className=''>
           <Banner></Banner>
           <div className='md:flex justify-around'>
             <Services></Services>
