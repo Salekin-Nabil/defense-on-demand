@@ -8,6 +8,8 @@ import NotFound from './components/NotFound/NotFound';
 import Footer from './components/Footer/Footer';
 import Details from './components/Details/Details';
 import Login from './components/Login/Login';
+import RequireAuth from './components/RequireAuth/RequireAuth';
+import Register from './components/Register/Register';
 
 function App() {
   return (
@@ -16,10 +18,11 @@ function App() {
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/Home' element={<Home></Home>}></Route>
-        <Route path='/Details/:serviceId' element={<Details></Details>}></Route>
+        <Route path='/Details/:serviceId' element={<RequireAuth><Details></Details></RequireAuth>}></Route>
         <Route path='/Blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/About' element={<About></About>}></Route>
         <Route path='/Login' element={<Login></Login>}></Route>
+        <Route path='/Register' element={<Register></Register>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>

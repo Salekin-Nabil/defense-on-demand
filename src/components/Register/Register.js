@@ -1,65 +1,49 @@
-import React, { useRef } from 'react';
-import './Login.css';
-import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import React, { useState } from 'react';
+import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
+import { Link, useNavigate } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
 import auth from '../../firebase.init';
 import Loading from '../Loading/Loading';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 import google from '../../images/social icons/google.png';
 import github from '../../images/social icons/github.png';
+import './Register.css';
 
-const Login = () => {
-    const emailRef = useRef('');
-    const passwordRef = useRef('');
-    const navigate = useNavigate();
-    const location = useLocation();
-
-    let from = location.state?.from?.pathname || "/";
-    let errorElement;
+const Register = () => {
+    const [agree, setAgree] = useState(false);
     const [
-        signInWithEmailAndPassword,
+        createUserWithEmailAndPassword,
         user,
         loading,
         error,
-    ] = useSignInWithEmailAndPassword(auth);
+    ] = useCreateUserWithEmailAndPassword(auth, {sendEmailVerification: true});
 
-    const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
+    const [updateProfile, updating, updateError] = useUpdateProfile(auth);
 
-    if (loading || sending) {
+    const navigate = useNavigate();
+
+    if(loading || updating){
         return <Loading></Loading>
     }
 
     if (user) {
-        navigate(from, { replace: true });
+     console.log('user', user);  
     }
 
-    if (error) {
-        errorElement = <p className='text-red-700 my-4 text-lg'>Error: {error?.message}</p>
-    }
-
-    const handleSubmit = event => {
+    const handleRegister = async (event) => {
         event.preventDefault();
-        const email = emailRef.current.value;
-        const password = passwordRef.current.value;
+        const name = event.target.name.value;
+        const email = event.target.email.value;
+        const password = event.target.password.value;
 
-        signInWithEmailAndPassword(email, password);
-    }
-
-    const resetPassword = async () => {
-        const email = emailRef.current.value;
-        if (email) {
-            await sendPasswordResetEmail(email);
-            toast('Sent email');
-        }
-        else{
-            toast('please enter your email address');
-        }
+        await createUserWithEmailAndPassword(email, password);
+        await updateProfile({ displayName: name });
+        console.log('Updated profile');
+        navigate('/home');
     }
 
     return (
         <div className='container w-50 mx-auto mt-[4vw]'>
-            <h1 className='text-[4vw] text-white font-bold shadow-2xl shadow-white mx-16'>Login <span className='text-[#beafa7]'>Form</span></h1>
+            <h1 className='text-[4vw] text-white font-bold shadow-2xl shadow-white mx-16'>Registration <span className='text-[#beafa7]'>Form</span></h1>
             <section className="h-screen mb-32">
                 <div className="container px-6 py-12 h-full">
                     <div className="flex justify-center items-center flex-wrap h-full g-6 text-gray-800">
@@ -71,7 +55,15 @@ const Login = () => {
                         />
                     </div>
                     <div className="md:w-8/12 lg:w-5/12 lg:ml-20">
-                        <form onSubmit={handleSubmit}>
+                        <form onSubmit={handleRegister}>
+                        <div className="mb-6">
+                            <input
+                            type="text"
+                            className="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border-4 border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-yellow-600 focus:outline-none shadow-lg shadow-white hover:shadow-xl hover:shadow-white"
+                            name="name"
+                            placeholder="Username"
+                            />
+                        </div>
                         <div className="mb-6">
                             <input
                             type="text"
@@ -92,19 +84,20 @@ const Login = () => {
                         <div className="flex justify-between items-center mb-6">
                             <div className="form-group form-check">
                             <input
+                                onClick={() => setAgree(!agree)}
                                 type="checkbox"
                                 className="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-yellow-600 checked:border-yellow-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
                                 id="exampleCheck3"
                             />
-                            <label className="form-check-label inline-block text-white" for="exampleCheck2">Remember me</label>
+                            <label className="form-check-label inline-block text-white" for="exampleCheck2">Accept Terms and Conditions</label>
                             </div>
                             <p
-                            onClick={resetPassword}
                             className="text-white hover:text-yellow-400 focus:text-yellow-500 active:text-yellow-600 duration-200 transition ease-in-out cursor-pointer"
-                            >Forgot password?</p
+                            >Update profile?</p
                             >
                         </div>
                         <button
+                            disabled={!agree}
                             type="submit"
                             className="inline-block px-7 py-3 bg-yellow-600 text-white font-medium text-sm leading-snug uppercase rounded shadow-lg hover:bg-yellow-700 hover:shadow-xl hover:shadow-white focus:bg-yellow-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-yellow-800 active:shadow-2xl active:shadow-white transition duration-150 ease-in-out w-full shadow-white"
                             data-mdb-ripple="true"
@@ -113,13 +106,12 @@ const Login = () => {
                             Sign in
                         </button>
 
-                        {errorElement}
-
                         <div
                             className="flex items-center my-4 before:flex-1 before:border-t before:border-gray-300 before:mt-0.5 after:flex-1 after:border-t after:border-gray-300 after:mt-0.5"
                         >
                             <p className="text-center font-semibold mx-4 mb-0 text-white">OR</p>
                         </div>
+
                         <a
                             className="px-7 py-3 text-black font-medium text-sm leading-snug uppercase rounded shadow-lg hover:shadow-xl hover:shadow-white focus:shadow-2xl focus:outline-none focus:ring-0 active:shadow-2xl active:shadow-white transition duration-150 ease-in-out w-full flex justify-center items-center mb-3 bg-white shadow-white"
                             href="#!"
@@ -174,8 +166,8 @@ const Login = () => {
                             /></svg>Continue with Facebook
                         </a>
                         <div className='flex items-center mt-6'>
-                            <p className='text-white text-left'> Don't have an account?</p>
-                            <Link to="/Register" className="text-yellow-300 ml-2 hover:text-yellow-400 focus:text-yellow-500 active:text-yellow-600 duration-200 transition ease-in-out">Register</Link>
+                            <p className='text-white text-left'> Already have an account?</p>
+                            <Link to="/Login" className="text-yellow-300 ml-2 hover:text-yellow-400 focus:text-yellow-500 active:text-yellow-600 duration-200 transition ease-in-out">Login</Link>
                             </div>
                         </form>
                     </div>
@@ -187,4 +179,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default Register;
