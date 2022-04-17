@@ -2,7 +2,7 @@ import React from 'react';
 
 const Loading = () => {
     return (
-        <div style={{height: '300px'}} classNameName='w-100 d-flex justify-content-center align-items-center'>
+        <div style={{height: '300px'}} className='w-100 d-flex justify-content-center align-items-center'>
             <div className="flex justify-center items-center space-x-2">
                 <div className="
                     spinner-border
