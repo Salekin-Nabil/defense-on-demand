@@ -17,7 +17,7 @@ const Service = ({service}) => {
                     <h3 className='text-[24px] font-bold mt-[40px]'>${price}</h3>
                     <p className='text-[14px] mt-[40px] font-medium'>{description}</p>
                     <div className="flex justify-center absolute w-full bottom-4 ml-[-28px]">
-                        <button onClick={()=>navigate(`/Details/${name}`)} type="button" className="block px-6 py-2.5 w-80 md:w-80 bg-[#a48e74] text-white font-medium text-lg leading-tight uppercase rounded-3xl shadow-md hover:bg-[#837269] hover:shadow-lg focus:bg-[#837269] focus:shadow-lg focus:outline-none focus:ring-0 active:bg-[#604d45] active:shadow-lg transition duration-150 ease-in-out">CHECK OUT</button>
+                        <button onClick={()=>navigate(`/Checkout/${name}`)} type="button" className="block px-6 py-2.5 w-80 md:w-80 bg-[#a48e74] text-white font-medium text-lg leading-tight uppercase rounded-3xl shadow-md hover:bg-[#837269] hover:shadow-lg focus:bg-[#837269] focus:shadow-lg focus:outline-none focus:ring-0 active:bg-[#604d45] active:shadow-lg transition duration-150 ease-in-out">CHECK OUT</button>
                     </div>
                 </div>
             </div>

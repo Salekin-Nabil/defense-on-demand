@@ -22,3 +22,4 @@
 * React rating for stars on the client's opinion section.
 * Firebase hook form for the check out form
 * React toastify for toast.
+* React leaflet for map in the checkout route.

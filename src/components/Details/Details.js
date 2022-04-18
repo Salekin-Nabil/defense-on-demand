@@ -44,7 +44,7 @@ const Details = () => {
                                     ease-in-out
                                     m-0
                                     focus:text-gray-700 focus:bg-white focus:border-yellow-600 focus:outline-none" id="exampleInput7"
-                                    placeholder="Name"/>
+                                    placeholder="Name" required/>
                                 </div>
                                 <div className="form-group mb-6 w-full">
                                 <input type="email" className="form-control block
@@ -62,7 +62,7 @@ const Details = () => {
                                     ease-in-out
                                     m-0
                                     focus:text-gray-700 focus:bg-white focus:border-yellow-600 focus:outline-none" id="exampleInput8"
-                                    placeholder="Email address"/>
+                                    placeholder="Email address" required/>
                                 </div>
                             </div>
                             <div className="form-group mb-6 w-full">
@@ -81,7 +81,7 @@ const Details = () => {
                                     ease-in-out
                                     m-0
                                     focus:text-gray-700 focus:bg-white focus:border-yellow-600 focus:outline-none" id="exampleInput9"
-                                    placeholder="Email address"/>
+                                    placeholder="Email address" required/>
                                 </div>
                             <div className="form-group mb-6">
                             <textarea
@@ -106,6 +106,7 @@ const Details = () => {
                             id="exampleFormControlTextarea13"
                             rows="3"
                             placeholder="Your Case Description"
+                            required
                             ></textarea>
                             </div>
                             <div className="form-group form-check text-center mb-6">
