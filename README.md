@@ -20,3 +20,5 @@
 * React firebase hooks for authentication.
 * React font awesome for logo.
 * React rating for stars on the client's opinion section.
+* Firebase hook form for the check out form
+* React toastify for toast.

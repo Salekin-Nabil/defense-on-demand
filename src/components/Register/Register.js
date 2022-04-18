@@ -69,6 +69,7 @@ const Register = () => {
                             className="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border-4 border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-yellow-600 focus:outline-none shadow-lg shadow-white hover:shadow-xl hover:shadow-white"
                             name="email"
                             placeholder="Email address"
+                            required
                             />
                         </div>
                         <div className="mb-6">
@@ -77,6 +78,7 @@ const Register = () => {
                             className="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border-4 border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-yellow-600 focus:outline-none shadow-lg shadow-white hover:shadow-xl hover:shadow-white"
                             name="password"
                             placeholder="Password"
+                            required
                             />
                         </div>
 
