@@ -8,7 +8,7 @@ const Footer = () => {
         <footer className="text-center bg-[#01080a] text-white md:mt-[200px]">
             <div className="container px-6 pt-6">
                 <div className="flex justify-center mb-6">
-                <a href="#!" type="button" className="rounded-full border-2 border-yellow-600 text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
+                <a href="#!" type="button" className="rounded-full border-2 border-yellow-600 text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1 shadow-lg shadow-white hover:shadow-xl hover:shadow-white">
                     <svg aria-hidden="true"
                     focusable="false"
                     data-prefix="fab"
@@ -25,7 +25,7 @@ const Footer = () => {
                     </svg>
                 </a>
 
-                <a href="#!" type="button" className="rounded-full border-2 border-yellow-600 text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
+                <a href="#!" type="button" className="rounded-full border-2 border-yellow-600 text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1 shadow-lg shadow-white hover:shadow-xl hover:shadow-white">
                     <svg aria-hidden="true"
                     focusable="false"
                     data-prefix="fab"
@@ -42,7 +42,7 @@ const Footer = () => {
                     </svg>
                 </a>
 
-                <a href="#!" type="button" className="rounded-full border-2 border-yellow-600 text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
+                <a href="#!" type="button" className="rounded-full border-2 border-yellow-600 text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1 shadow-lg shadow-white hover:shadow-xl hover:shadow-white">
                     <svg aria-hidden="true"
                     focusable="false"
                     data-prefix="fab"
@@ -59,7 +59,7 @@ const Footer = () => {
                     </svg>
                 </a>
 
-                <a href="#!" type="button" className="rounded-full border-2 border-yellow-600 text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
+                <a href="#!" type="button" className="rounded-full border-2 border-yellow-600 text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1 shadow-lg shadow-white hover:shadow-xl hover:shadow-white">
                     <svg aria-hidden="true"
                     focusable="false"
                     data-prefix="fab"
@@ -76,7 +76,7 @@ const Footer = () => {
                     </svg>
                 </a>
 
-                <a href="#!" type="button" className="rounded-full border-2 border-yellow-600 text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
+                <a href="#!" type="button" className="rounded-full border-2 border-yellow-600 text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1 shadow-lg shadow-white hover:shadow-xl hover:shadow-white">
                     <svg aria-hidden="true"
                     focusable="false"
                     data-prefix="fab"
@@ -93,7 +93,7 @@ const Footer = () => {
                     </svg>
                 </a>
 
-                <a href="#!" type="button" className="rounded-full border-2 border-yellow-600 text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
+                <a href="#!" type="button" className="rounded-full border-2 border-yellow-600 text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1 shadow-lg shadow-white hover:shadow-xl hover:shadow-white">
                     <svg aria-hidden="true"
                     focusable="false"
                     data-prefix="fab"
@@ -138,14 +138,14 @@ const Footer = () => {
                             transition
                             ease-in-out
                             m-0
-                            focus:text-gray-700 focus:bg-white focus:border-yellow-500 focus:outline-none
+                            focus:text-gray-700 focus:bg-white focus:border-yellow-500 focus:outline-none shadow-lg shadow-white hover:shadow-xl hover:shadow-white
                         "
                         id="exampleFormControlInput1"
                         placeholder="Email address"/>
                     </div>
 
                     <div className="md:mr-auto mb-6">
-                        <button type="submit" className="inline-block px-6 py-2 border-2 border-yellow-600 text-white font-medium text-xs leading-tight uppercase rounded hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out">
+                        <button type="submit" className="inline-block px-6 py-2 border-2 border-yellow-600 text-white font-medium text-xs leading-tight uppercase rounded hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out shadow-lg shadow-white hover:shadow-xl hover:shadow-white">
                         Subscribe
                         </button>
                     </div>
