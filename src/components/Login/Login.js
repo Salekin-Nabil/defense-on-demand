@@ -25,7 +25,7 @@ const Login = () => {
 
     const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
 
-    if (loading || sending) {
+    if (loading) {
         return <Loading></Loading>
     }
 
@@ -42,7 +42,13 @@ const Login = () => {
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
 
+        console.log(email, password);
+
         signInWithEmailAndPassword(email, password);
+    }
+
+    const navigateRegister = event => {
+        navigate("/register");
     }
 
     const resetPassword = async () => {
@@ -77,6 +83,8 @@ const Login = () => {
                             className="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border-4 border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-yellow-600 focus:outline-none shadow-lg shadow-white hover:shadow-xl hover:shadow-white"
                             name="email"
                             placeholder="Email address"
+                            ref={emailRef}
+                            required
                             />
                         </div>
                         <div className="mb-6">
@@ -85,6 +93,8 @@ const Login = () => {
                             className="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border-4 border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-yellow-600 focus:outline-none shadow-lg shadow-white hover:shadow-xl hover:shadow-white"
                             name="password"
                             placeholder="Password"
+                            ref={passwordRef}
+                            required
                             />
                         </div>
 
@@ -122,7 +132,7 @@ const Login = () => {
                         <SocialLogin></SocialLogin>
                         <div className='flex items-center mt-6'>
                             <p className='text-white text-left'> Don't have an account?</p>
-                            <Link to="/Register" className="text-yellow-300 ml-2 hover:text-yellow-400 focus:text-yellow-500 active:text-yellow-600 duration-200 transition ease-in-out">Register</Link>
+                            <Link to="/Register" onClick={navigateRegister} className="text-yellow-300 ml-2 hover:text-yellow-400 focus:text-yellow-500 active:text-yellow-600 duration-200 transition ease-in-out">Register</Link>
                             </div>
                         </form>
                     </div>

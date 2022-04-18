@@ -12,7 +12,6 @@ const Header = () => {
     const [open, setOpen] = useState(false);
 
     const [user] = useAuthState(auth);
-    console.log(user);
 
     const handleSignOut = () =>{
         signOut(auth);
